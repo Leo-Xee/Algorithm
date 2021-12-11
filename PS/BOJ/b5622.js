@@ -5,26 +5,26 @@
 const fs = require('fs');
 const filePath = process.platform === 'linux' ? '/dev/stdin' : 'input.txt';
 const input = fs.readFileSync(filePath).toString().trim();
-console.log(input);
 
-const alpabets = {};
-let cnt = 0;
-let num = 3;
 let sum = 0;
-
-// 알파벳별 소요시간 세팅(A ~ Z)
-for (let i = 65; i <= 90; ++i) {
-  if (cnt === 3 && num < 10) {
-    cnt = 0;
-    num++;
-  }
-  alpabets[String.fromCharCode(i)] = num;
-  cnt++;
-}
+const alpabets = {
+  ABC: 3,
+  DEF: 4,
+  GHI: 5,
+  JKL: 6,
+  MNO: 7,
+  PQRS: 8,
+  TUV: 9,
+  WXYZ: 10,
+};
 
 // input을 더해서 출력
 for (let i = 0; i < input.length; ++i) {
-  sum += alpabets[input[i]];
+  for (key in alpabets) {
+    if (key.includes(input[i])) {
+      sum += alpabets[key];
+    }
+  }
 }
 
 console.log(sum);
