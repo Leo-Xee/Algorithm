@@ -7,7 +7,7 @@ const filePath = process.platform === 'linux' ? '/dev/stdin' : 'input.txt';
 const input = fs.readFileSync(filePath).toString().trim();
 
 let sum = 0;
-const alpabets = {
+const alphabets = {
   ABC: 3,
   DEF: 4,
   GHI: 5,
@@ -20,9 +20,9 @@ const alpabets = {
 
 // input을 더해서 출력
 for (let i = 0; i < input.length; ++i) {
-  for (key in alpabets) {
+  for (key in alphabets) {
     if (key.includes(input[i])) {
-      sum += alpabets[key];
+      sum += alphabets[key];
     }
   }
 }
