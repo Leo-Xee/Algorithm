@@ -1,6 +1,6 @@
 # algorithm-archive
 
-이 Repo는 백준 온라인저지, 프로그래머스등의 알고리즘 문제를 푼 소스코드를 관리하며 관련 이론들을 정리합니다. 문제 풀이 언어로는 C++, Javascript를 사용합니다.
+이 Repo는 BaekJoon, Programmers, LeetCode의 알고리즘 문제 풀어보고 소스코드와 주요한 이론들을 정리합니다. 문제 풀이 언어로는 C++, Javascript를 사용합니다.
 
 ## 구조
 
@@ -9,7 +9,10 @@
 ├── BOJ
 │   ├── C++
 │   └── JS
-├── Programmers 
+├── Programmers
+│   ├── C++
+│   └── JS
+├── LeetCode
 │   ├── C++
 │   └── JS
 ├── README.md

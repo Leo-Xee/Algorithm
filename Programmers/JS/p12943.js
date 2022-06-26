@@ -2,14 +2,6 @@
  * 콜라츠 추측
  */
 
-const fs = require("fs");
-const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
-const input = fs
-  .readFileSync(filePath)
-  .toString()
-  .split("\n")
-  .map((x) => +x);
-
 function solution(num) {
   let cnt = 0;
 
@@ -25,6 +17,6 @@ function solution(num) {
   return cnt;
 }
 
-input.forEach((num) => {
-  console.log(solution(num));
-});
+const input = 6;
+
+console.log(solution(input));

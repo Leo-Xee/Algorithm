@@ -1,6 +1,6 @@
-const fs = require("fs");
-const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
-const input = fs.readFileSync(filePath).toString();
+/**
+ * 약수의 합
+ */
 
 function solution(n) {
   let sum = 0;
@@ -10,4 +10,6 @@ function solution(n) {
   return sum;
 }
 
-console.log(solution(+input));
+const input = 12;
+
+console.log(solution(input));
